@@ -1,0 +1,59 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, blue, rgb(0, 0, 70));
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 64px;
+}
+.row{
+    padding-top:1px;
+    width: 40%;
+    height: 500px;
+    background-color: rgb(31, 31, 31);
+    margin: 25px auto;
+    border-radius: 25px;
+    text-align: center;
+}
+.row:first-child{
+    width: 40%;
+    height: 400px;
+}
+input[type="text"], button{
+    width: 50%;
+    height: 15%;
+    margin-bottom:10%;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0.5));
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 24px;
+}
+input[type="text"]:first-child{
+    margin-top:10%;
+}
+button:hover
+{
+    background: linear-gradient(to left, rgb(155rgba(37, 37, 37, 0.5)09, 109, 0.5));
+}
+table{
+    margin: 10% auto;
+    width: 70%;
+    height: 80%;
+}
+td {
+    width: 45%;
+    height:8%;
+    margin:1%;
+    background-color: white;
+    border-radius:5px;
+}
+tbody:first-child > tr > td{
+    background-color: red;
+    color:white;
+}
+tbody:last-child > tr > td{
+    background-color: rgb(70, 70, 70);
+    color:white;
+}
