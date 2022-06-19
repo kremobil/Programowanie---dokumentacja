@@ -14,10 +14,9 @@ function generation(){
     for (let i = 0; i < 10; i++) {
         numberA = Math.round(maxA * Math.random());
         numberB = Math.round(maxB * Math.random());
-        table.innerHTML += "<tr><td>"+numberA+"</td><td>"+numberB+"</td></tr>";
-        resultA += numberA;
+        table.innerHTML += `<tr><td>${numberA}</td><td>${numberB}</td></tr>`;
+        resultA = resultA + numberA;
         resultB += numberB;
-        console.log(numberB)
     }
-    table.innerHTML += "<tr><td>"+resultA+"</td><td>"+resultB+"</td></tr>";
+    table.innerHTML += `<tr><td>${resultA}</td><td>${resultB}</td></tr>`;
 }
