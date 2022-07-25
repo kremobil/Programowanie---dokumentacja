@@ -1,0 +1,53 @@
+body{
+    background-color: #666;
+    margin: 0px !important;
+}
+.title{
+    padding: 0 30px;
+    color: white;
+}
+.menu{
+    display: flex;
+    width: 100%;
+    background-color: #DDD;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.menu div.option{
+    background-color: #444;
+    padding: 5px 30px;
+    border-radius: 15px 25px 5px 25px;
+    color: #fff;
+    margin: 10px;
+}
+.content{
+    display: flex;
+    width: 80%;
+    margin: 10px 10%;
+}
+.leftbar{
+    background-color: #999;
+    flex: 2;
+    border-radius: 40px;
+}
+.leftbar div{
+    background-color: rgb(118, 250, 92);
+    margin: 25px 30px;
+    padding: 10px 30px;
+    border-radius: 10px 20px 5px 20px;
+}
+.articles{
+    flex: 8;
+    background-color: rgba(240, 255, 108, 0.596);
+    padding: 35px;
+    margin: 0 30px;
+    border-radius: 40px;
+}
+.articles .article{
+    background-color: rgba(186, 250, 35, 0.822);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+}
