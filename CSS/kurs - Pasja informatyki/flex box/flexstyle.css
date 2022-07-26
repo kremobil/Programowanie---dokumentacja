@@ -21,6 +21,11 @@ body{
     border-radius: 15px 25px 5px 25px;
     color: #fff;
     margin: 10px;
+    transition: all 0.5s linear 100ms;
+}
+.menu div.option:hover{
+    background-color: #222;
+    cursor: pointer;
 }
 .content{
     display: flex;
@@ -37,6 +42,11 @@ body{
     margin: 25px 30px;
     padding: 10px 30px;
     border-radius: 10px 20px 5px 20px;
+    transition: all 0.5s linear 100ms;
+}
+.leftbar div:hover{
+    background-color: rgb(2, 196, 25);
+    cursor: pointer;
 }
 .articles{
     flex: 8;
@@ -44,6 +54,8 @@ body{
     padding: 35px;
     margin: 0 30px;
     border-radius: 40px;
+    display: flex;
+    flex-direction: column;
 }
 .articles .article{
     background-color: rgba(186, 250, 35, 0.822);
