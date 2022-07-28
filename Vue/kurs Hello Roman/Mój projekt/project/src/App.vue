@@ -1,6 +1,7 @@
 <template>
 <!-- eslint-disable -->
   <div :class="[{flexStart: step === 1}, 'wrapper']">
+    <div class="lds-dual-ring" v-if="step === 1 && loading"></div>
     <transition name="slide">
       <img src="./assets/logo.png" class="logo" v-if="step === 1">
     </transition>
@@ -9,11 +10,14 @@
     </transition>
     <Claim v-if="step === 0"/>
     <SearchInput @input="handleSearch" :dark="step === 1"/>
-    <div class="results"  v-if="results && !loading && step === 1">
-      <item :myvar='item' v-for="item in results" :key="item.data[0].nasa_id" />
-      {{ item }}
+    <div class="results"  v-if="results && !loading && step === 1 && results.length > 0">
+      <item :myvar='item' v-for="item in results" :key="item.data[0].nasa_id" @click.native="handleModalOpen(item)" />
     </div>
+    <h2 class="errorMessage"  v-else-if="results.length === 0 && step === 1">Sorry we cand find it.<br />try something elese.</h2>
+    
   </div>
+  
+  <Modal v-if="modalOpen" @closeModal="modalOpen = false" :data="modalData"/>
 </template>
 
 <script>
@@ -23,6 +27,7 @@ import Claim from '@/components/Claim.vue';
 import SearchInput from '@/components/SearchInput.vue';
 import Bg from '@/components/bg.vue';
 import item from '@/components/item.vue';
+import Modal from '@/components/modal.vue';
 
 const API = 'https://images-api.nasa.gov/search?q=';
 
@@ -33,6 +38,7 @@ export default {
     SearchInput,
     Bg,
     item,
+    Modal,
   },
   data() {
     return {
@@ -40,9 +46,19 @@ export default {
       step: 0,
       searchValue: '',
       results: [],
+      modalOpen: false,
+      modalData: {},
     };
   },
   methods: {
+    handleModalOpen(modalitem) {
+      this.modalOpen = true;
+      this.modalData = {
+        title: modalitem.data[0].title,
+        description: modalitem.data[0].description,
+        url: modalitem.links[0].href,
+      };
+    },
     handleSearch: debounce(function searchResponse(inputvalue) {
       this.loading = true;
       axios.get(`${API}${inputvalue.originalTarget.value}&media_type=image`)
@@ -127,4 +143,37 @@ export default {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
+  .errorMessage {
+    text-align: center;
+    color: rgb(255, 52, 52);
+    margin-top: 70px;
+    font-size: 25px;
+  }
+.lds-dual-ring {
+  position: fixed;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: calc(50vh - 40px) calc(50vw - 40px);
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #1e3d4a;
+  border-color: #1e3d4a transparent #1e3d4a transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 </style>

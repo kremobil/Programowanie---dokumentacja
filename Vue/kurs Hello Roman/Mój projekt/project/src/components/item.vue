@@ -32,6 +32,8 @@ export default {
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 2%;
+        cursor: pointer;
+        transition: opacity 0.5s linear 100ms;
         @media (min-width: 400px) {
           width: 200px;
           height: 200px;
@@ -40,5 +42,8 @@ export default {
           width: 300px;
           height: 300px;
         }
+    }
+    .image:hover {
+        opacity: 0.75;
     }
 </style>
