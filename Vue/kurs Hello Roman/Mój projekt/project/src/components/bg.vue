@@ -3,6 +3,7 @@
 </template>
 
 <script>
+/* eslint-disable */ 
     export default {
         name: 'bg',
     };
@@ -12,6 +13,8 @@
     .backgroundimage {
         position: fixed;
         width: 100%;
+        top:0;
+        left: 0;
         height: 100vh;
         background-image: url('../assets/background.jpg');
         background-repeat: no-repeat;

@@ -1,20 +1,28 @@
 <template>
     <div class="searchWrapper">
-        <input id="search" type="text" name="search" :value="value" @input="handleSearch"/>
+         <!-- eslint-disable-next-line -->
+        <input id="search" type="text" name="search" v-model="inputvalue" @input="handleSearch" :class="{ dark: dark }"/>
     </div>
 </template>
 <script>
+/* eslint-disable */ 
 export default {
     name: "SearchInput",
     props: {
-        value: {
-            type: String,
-            required: true,
+        dark: {
+            type: Boolean,
+            default: false,
+        }
+    },
+    data() {
+        return {
+            inputvalue: "",
         }
     },
     methods: {
         handleSearch(e) {
-            this.$emit('input', e.target.value);
+            console.log(this.inputvalue);
+            this.$emit('input', this.inputvalue);
         },
     },
 }
@@ -48,6 +56,17 @@ export default {
         box-shadow: 0 10px 15px -10px rgba(255, 255, 255, 0.5);
         @media (min-width: 1024px) {
             box-shadow: 0 15px 20px -10px rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    .dark {
+        color: #1e3d4a;
+        border-bottom-color: #1e3d4a;
+    }
+    .dark:focus {
+        box-shadow: 0 10px 15px -10px rgba(#1e3d4a, 0.5);
+        @media (min-width: 1024px) {
+            box-shadow: 0 15px 20px -10px rgba(#1e3d4a, 0.6);
         }
     }
 </style>
