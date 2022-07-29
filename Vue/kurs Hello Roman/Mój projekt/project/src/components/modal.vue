@@ -2,7 +2,7 @@
     <div class="outerWrapper">
         <div class="innerWrapper">
             <div class="photo">
-                <img :src="data.url" alt="placeholder" />
+                <img :src="data.url" :alt="data.title" />
             </div>
             <div class="decription">
                 <h2 class="title">{{data.title}}</h2>
