@@ -14,7 +14,6 @@
       <item :myvar='item' v-for="item in results" :key="item.data[0].nasa_id" @click.native="handleModalOpen(item)" />
     </div>
     <h2 class="errorMessage"  v-else-if="results.length === 0 && step === 1">Sorry we cand find it.<br />try something elese.</h2>
-    
   </div>
   
   <Modal v-if="modalOpen" @closeModal="modalOpen = false" :data="modalData"/>
