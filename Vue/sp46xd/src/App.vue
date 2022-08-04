@@ -21,12 +21,48 @@
       <router-link to="/" class="option">Szkoła kompetencji</router-link>
       <router-link to="/" class="option">Zadanie Planowanie</router-link>
     </div>
+    <div class="content">
+      <Leftbar class="leftbar"/>
+      <div class="site-view">
+        <router-view />
+      </div>
+      <Rightbar />
+    </div>
+    <div class="footer">
+      <div class="footerlinks">
+        <a href="http://www.helpline.org.pl/" target="_blank">
+          <img src=" http://sp46.netstrefa.pl/GIMNAZJUM16/images/helpline140x49.gif" alt="hlepline.org" />
+        </a>
+        <a href="http://www.bezpiecznyinternet.org/?s=certyfikat&cat=6&id=1228" target="_blank">
+          <img src=" http://sp46.netstrefa.pl/GIMNAZJUM16/images/spd_150x75.gif" alt="strona przyjazna dzieciom" />
+        </a>
+        <a href="http://www.dzieckowsieci.fdn.pl/" target="_blank">
+          <img src="  http://sp46.netstrefa.pl/GIMNAZJUM16/images/dziecko w sieci b.jpg" alt="dzieckow sieci" />
+        </a>
+        <a href="http://www.116111.pl/" target="_blank">
+          <img src=" http://sp46.netstrefa.pl/GIMNAZJUM16/images/TELEFON ZAUFANIA.gif " alt="116111.pl" />
+        </a>
+      </div>
+      <h3>
+        SZKOŁA PODSTAWOWA NR 46 W BYDGOSZCZY IM. UNII EUROPEJSKIEJ ul. Kombatantów 2, 85-829
+        Bydgoszcz<br /> tel.: 52 361 03 22<br /><br />
+        Copyright © Wiktor Fajkowski 2022
+      </h3>
+    </div>
     <!-- <router-view/> -->
   </div>
 </template>
 
 <script>
+import Leftbar from './components/leftbar.vue';
+import Rightbar from './components/rightbar.vue';
 
+export default {
+  components: {
+    Leftbar,
+    Rightbar,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -91,5 +127,57 @@
   .option:hover {
     background-color: #beab00;
     border: #928400 solid 1px;
+  }
+  .footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #404040;
+    border-top: #202020 solid 2px;
+    align-items: center;
+  }
+  .footerlinks {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 15px 0;
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 70%;
+    }
+  }
+  .footer img{
+    margin: 0 10%;
+    width: 80%;
+    height: 100px;
+    border: 1px solid #202020;
+    border-radius: 10px;
+  }
+  .footer h3{
+    color: white;
+    text-align: center;
+    margin: 5px 10%;
+    font-size: 16px;
+  }
+  .content {
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1024px) {
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+  }
+  .site-view {
+    width: 70%;
+    background-color: #ddd;
+    padding: 25px;
   }
 </style>
