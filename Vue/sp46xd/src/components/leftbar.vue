@@ -85,8 +85,6 @@ export default {
     display: flex;
     @media (min-width: 1024px) {
       width: 15%;
-      align-self: flex-start;
-      min-height: 800px;
     }
   }
   .mobile-expand {
@@ -210,7 +208,6 @@ export default {
   }
   .leftlink img{
     width: 100%;
-    height: auto;
   }
   .mobilelink{
     background-color: #213c84;

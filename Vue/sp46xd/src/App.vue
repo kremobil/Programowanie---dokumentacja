@@ -176,8 +176,14 @@ export default {
     }
   }
   .site-view {
-    width: 70%;
+    width: 100%;
     background-color: #ddd;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1024px) {
+      width: 70%;
+    }
   }
 </style>
