@@ -31,5 +31,16 @@ export default {
       font-size: 18px;
       color: #213c84;
     }
+    @media (max-width: 768px) {
+      border-right: none;
+      border-left: none;
+      border-radius: 0;
+      p{
+        font-size: 14px;
+      }
+      h2{
+        font-size: 24px;
+      }
+    }
   }
 </style>

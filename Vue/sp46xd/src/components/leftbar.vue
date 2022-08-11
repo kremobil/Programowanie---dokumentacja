@@ -25,11 +25,17 @@
     <Transition name="fade">
       <div class="mobile-leftmenu" v-if="menu.show">
         <router-link :to="option.router" class="mobile-leftoption" v-for="option in menu.content"
-        :key="option.title">
+        :key="option.title" @click="hidenav">
           {{option.title}}
         </router-link>
-        <a href="https://www.edurewolucja.pl//" class="mobile-leftoption mobilelink" target="_blank">Edu(R)Ewolucja</a>
-        <a href="http://bip.edu.bydgoszcz.pl/sp46/" class="mobile-leftoption mobilelink" target="_blank">Bip</a>
+        <a href="https://www.edurewolucja.pl//" class="mobile-leftoption mobilelink" target="_blank" @click="hidenav">Edu(R)Ewolucja</a>
+        <a href="http://bip.edu.bydgoszcz.pl/sp46/" class="mobile-leftoption mobilelink" target="_blank" @click="hidenav">Bip</a>
+        <a href="http://sp46.netstrefa.pl/images/infolinia_1.png" class="mobile-leftoption mobilelink" target="_blank" @click="hidenav">Linia Dzieciom</a>
+        <a href="https://padlet.com/agnieszkabulinska87/9iaudvf3egew" class="mobile-leftoption mobilelink" target="_blank" @click="hidenav">Szkolny Bookcrossing</a>
+        <a href="https://padlet.com/smacznywf/tqn7y32whqwj" class="mobile-leftoption mobilelink" target="_blank" @click="hidenav">Jedz na zdrowie</a>
+        <a href="https://oswoicpolski.blogspot.com/" class="mobile-leftoption mobilelink" target="_blank" @click="hidenav">Oswoić polski | Blog</a>
+        <a href="https://www.lekkoatletykadlakazdego.pl//'" class="mobile-leftoption mobilelink" target="_blank" @click="hidenav">LA dla każdego</a>
+        <a href="https://bydgoszczkarate.pl/'" class="mobile-leftoption mobilelink" target="_blank" @click="hidenav">Kyokushin Karate</a>
       </div>
     </Transition>
     <button class="mobile-expand" @click="shownav" v-if="!menu.show">Rozwiń ᐯ</button>
@@ -71,6 +77,9 @@ export default {
     shownav() {
       this.menu.show = !this.menu.show;
     },
+    hidenav() {
+      this.menu.show = false;
+    },
   },
 };
 </script>
@@ -95,8 +104,14 @@ export default {
     color: white;
     border: 1px solid #222;
     border-radius: 3px;
+    transition: all 0.5s;
+    cursor: pointer;
     @media (min-width: 1024px) {
       display: none;
+    }
+    &:hover {
+      background-color:  #333;
+      border: 1px solid #111;
     }
   }
   .mobile-leftmenu {
@@ -145,8 +160,7 @@ export default {
     transition: all 0.5s;
     &:hover{
       background-color: #666;
-      border-radius: 3px;
-
+      box-shadow: 0 0 8px 4px #666;
     }
     &:first-child{
       border: none;

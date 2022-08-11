@@ -176,14 +176,21 @@ export default {
     }
   }
   .site-view {
+    transition: all 0.5s;
     width: 100%;
-    background-color: #ddd;
-    padding: 25px;
+    background-color: #fff;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (min-width: 768px) {
+      width: 90%;
+      padding: 25px;
+    }
     @media (min-width: 1024px) {
       width: 70%;
+      background-color: #ddd;
+      padding: 25px;
     }
   }
 </style>
