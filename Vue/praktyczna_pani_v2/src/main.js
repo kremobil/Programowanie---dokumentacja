@@ -9,12 +9,17 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* import specific icons */
 import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
-import { faCartShopping, faBars } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCartShopping,
+  faBars,
+  faPlus,
+  faMinus,
+} from '@fortawesome/free-solid-svg-icons';
 import App from './App.vue';
 import router from './router';
 
 /* add icons to the library */
-library.add(faCircleUser, faCartShopping, faBars);
+library.add(faCircleUser, faCartShopping, faBars, faPlus, faMinus);
 
 createApp(App)
   .use(router)

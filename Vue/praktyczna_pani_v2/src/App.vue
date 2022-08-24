@@ -36,6 +36,7 @@
               {{ option.title }}
             </router-link>
           </div>
+          <BasketSidebar v-if="sidebar.basket" />
         </div>
       </transition>
     </nav>
@@ -43,6 +44,8 @@
 </template>
 
 <script>
+import BasketSidebar from './components/BasketSidebar.vue';
+
 export default {
   name: 'app',
   methods: {
@@ -77,6 +80,7 @@ export default {
       ],
     };
   },
+  components: { BasketSidebar },
 };
 </script>
 
