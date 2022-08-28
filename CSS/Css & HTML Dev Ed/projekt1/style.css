@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+.clear{
+    clear: both;
+}
+html, body{
+    height: 100%;
+}
+nav h1{
+    font-size: 2.8rem;
+    color: #fff;
+    width: 10rem;
+    display: inline;
+}
+h2{
+    font-size: 3.6rem;
+    padding: 5rem 0rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 2.8rem;
+}
+button{
+    font-size: 1.8rem;
+}
+nav{
+    background-color: rgb(37, 37, 66);
+    padding: 3rem;
+}
+nav ul{
+    float: right;
+    list-style: none;
+}
+nav li {
+    float: left;
+    margin: 0 4rem;
+}
+.hero-section{
+    background: url(pexels-igor-ovsyannykov-205961.jpg);
+    height: 100rem;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 15rem;
+    text-shadow: 3px 3px 6px black;
+}
+.hero-section button{
+    padding: 1rem 4rem;
+    margin-top: 4rem;
+    background: rgb(59, 59, 120);
+    border: none;
+    color: white;
+    cursor:   pointer;
+}
+.form-section{
+    text-align: center;
+}
+form input,form label, form textarea{
+    display: block;
+    font-size: 2.4rem;
+}
+form input, form textarea{
+    margin: 2rem auto;
+    width: 50%;
+}
+form button{
+    margin-top: 10rem;
+    padding: 1rem 4rem;
+    background-color: rgb(59, 59, 120);
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 50%;
+}
