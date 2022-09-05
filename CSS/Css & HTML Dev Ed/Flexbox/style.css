@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+a {
+  color: rgb(46, 46, 46);
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  display: block;
+  background: #fff;
+  transition: background-color 0.5s linear;
+}
+a:hover {
+  background: rgb(238, 213, 113);
+}
+nav ul {
+  display: flex;
+  min-height: 10vh;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: white;
+}
+nav li {
+  list-style: none;
+  font-size: 1.4rem;
+}
+nav h1 {
+  font-size: 2.8rem;
+  color: rgb(238, 213, 113);
+}
+
+.hero {
+  height: 90vh;
+  background: url(./pexels-hasan-albari-1229861.jpg);
+  background-size: cover;
+  background-position: 90% 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero h2 {
+  margin: 8rem 0;
+  font-size: 2.4rem;
+}
+.hero button {
+  padding: 1rem 3rem;
+  background: rgb(238, 213, 113);
+  border: none;
+  box-shadow: 4px 4px rgb(187, 167, 89);
+  color: rgb(46, 46, 46);
+  font-size: 1.8rem;
+  border-radius: 0.2rem;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.5s;
+}
+.hero button:hover {
+  box-shadow: 8px 8px rgb(139, 125, 67);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.intro {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.intro .intro-image {
+  flex: 1 1 50rem;
+}
+.intro img {
+  width: 100%;
+}
+.intro article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 50rem;
+}
+.intro article p {
+  padding: 2rem 0;
+  font-size: 1.4rem;
+}
+.intro article h2 {
+  padding: 3rem;
+  font-size: 2.4rem;
+  color: rgb(238, 213, 113);
+}
