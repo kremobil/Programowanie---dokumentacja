@@ -100,6 +100,7 @@ button:hover {
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .locations-header {
   width: 40%;
@@ -119,19 +120,41 @@ button:hover {
   position: absolute;
   top: 0;
   right: 0;
+  pointer-events: none;
 }
 .moving-cloud-1 {
+  animation: cloud1 ease-in-out 8s infinite alternate;
 }
 .moving-cloud-2 {
-  top: 20%;
+  animation: cloud2 ease-in-out 8s infinite alternate;
+  top: 20rem;
   z-index: -1;
   opacity: 0.8;
+}
+@keyframes cloud1 {
+  from {
+    transform: translate(10%, -5%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+@keyframes cloud2 {
+  from {
+    transform: translate(15%, -10%);
+  }
+  to {
+    transform: translate(0%);
+  }
 }
 
 /* media quary */
 @media screen and (max-width: 1024px) {
   html {
     font-size: 52%;
+  }
+  .cloud {
+    height: 50rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -140,5 +163,15 @@ button:hover {
   }
   html {
     font-size: 46%;
+  }
+  .cloud {
+    height: 30rem;
+  }
+  .moving-cloud-2 {
+    top: 10rem;
+  }
+  .locations-header {
+    width: 80%;
+    margin-top: 15rem;
   }
 }

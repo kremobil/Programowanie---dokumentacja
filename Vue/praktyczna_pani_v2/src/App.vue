@@ -37,14 +37,17 @@
             </router-link>
           </div>
           <BasketSidebar v-if="sidebar.basket" />
+          <AccountSidebar v-if="sidebar.account" />
         </div>
       </transition>
     </nav>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import BasketSidebar from './components/BasketSidebar.vue';
+import AccountSidebar from './components/AccountSidebar.vue';
 
 export default {
   name: 'app',
@@ -80,21 +83,20 @@ export default {
       ],
     };
   },
-  components: { BasketSidebar },
+  components: { BasketSidebar, AccountSidebar },
 };
 </script>
 
 <style lang="scss">
-$gray: #2a3442;
-$main-pink: #e6345b;
-$mid-light: #a5a5a5;
-$light: #d9d9d9;
-$green: #748400;
+@import './styles/vars';
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+html {
+  font-size: 62.5%;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
