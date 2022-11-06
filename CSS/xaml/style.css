@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.tile {
+  border: 1px solid black;
+  flex: 1 1 10rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  font-size: 24px;
+  padding: 5rem 2.5rem;
+}
+.tile * {
+  transition: all 0.5s;
+}
+.tile h1 {
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+  letter-spacing: 5px;
+  font-size: 48px;
+}
+.tile header {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 217, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tile:nth-child(2) header {
+  background-color: rgb(255, 115, 0);
+}
+.tile:nth-child(3) header {
+  background-color: rgb(255, 51, 0);
+}
+.tile:nth-child(4) header {
+  background-color: rgb(255, 0, 0);
+}
+.tile input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  transition: none;
+}
+.tile:focus-within {
+  flex: 100 1 5rem;
+}
+.tile:focus-within header {
+  width: 100%;
+  border-bottom: 2px solid BLACK;
+  height: 5rem;
+}
+.tile:focus-within h1 {
+  writing-mode: horizontal-tb;
+}
+.tile p {
+  display: none;
+}
+.tile:focus-within p {
+  display: flex;
+}
+.code {
+  padding: 1.5rem;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  border-radius: 5px;
+}

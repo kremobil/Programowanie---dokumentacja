@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tile">
+      <input type="radio" name="tile" id="1" />
+      <header class="title">
+        <h1>czym jest xaml?</h1>
+      </header>
+      <article>
+        <p>
+          XAML jest dialektem XML i stał się on ważną częścią platformy .NET od
+          czasu jego pierwszej prezentacji w 2006 roku w trakcie premiery WPF.
+        </p>
+        <br />
+        <p>
+          XAML jest mechanizmem zbliżonym do HTML lub SVG, który korzysta z
+          .NET-owej API. Mówiąc krócej sam XAML bez frameworka jak WPF jest
+          tylko zbiorem znaczników to kompilator który scala kod XAML z kodem
+          proceduralnym robi prawdziwą magię.
+        </p>
+      </article>
+    </div>
+    <div class="tile">
+      <input type="radio" name="tile" id="2" />
+      <header><h1>Elementy i Atrybuty</h1></header>
+      <article>
+        <p>
+          Specyfikacja XAML określa zasady mapowania .NET-owych przestrzeń nazw,
+          typów , właściwości i zdarzeń na ich XAML-owe odpowiedniki. Możemy
+          zauważyć to patrząc na poniższy kod.
+        </p>
+        <br />
+        <p class="code">
+          &lt; button
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          Content="Hello" /&gt;
+        </p>
+        <br />
+        <p>
+          Deklarowanie elementów w XAML jest równe tworzeniu odpowiednich
+          obiektów .NET-owych przez ich domyślne konstruktory. Ustawienie
+          atrybutu elementu jest równe ustawianiu właściwości o tej samej nazwie
+          danego obiektu. Analogicznie ustawia się zdarzenia w XAML.
+        </p>
+        <br />
+        <p class="code">
+          &lt;button
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          Content="Hello" Click="b_Click" /&gt;
+        </p>
+      </article>
+    </div>
+    <div class="tile">
+      <input type="radio" name="tile" id="3" />
+      <header><h1>Przestrzeń nazw</h1></header>
+      <article>
+        <p>
+          Najbardziej tajemniczą różnica pomiędzy kodem XAML a kodem C# jest
+          widoczna w przestrzeniach nazw. Przykładowo w poprzednim wpisie w
+          deklaracji przycisku pojawił się następująca właściwość xmlns.
+        </p>
+        <br />
+        <p>
+          Ten tajemniczy napis
+          “http://schemas.microsoft.com/winfx/2006/xaml/presentation” mapuje
+          .NET przestrzeń nazw System.Windows.Controls. A w niej znajduje się
+          definicja kontrolki “Button”. Bez z tej przestrzeni nazw kod XAML nie
+          rozpoznaje wyrażenia “Button”.
+        </p>
+        <br />
+        <p>
+          Główny człon elementu pliku XAML musi określić przynajmniej jedną XML
+          przestrzeń nazw. Ta przestrzeń nazw może być później używana przez
+          wszystkie elementy zawierające się w nim oraz przez sam element
+          główny.
+        </p>
+        <br />
+        <p class="code">
+          &lt;Window x:Class="WpfApplication4.MainWindow"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          Title="MainWindow" Height="350" Width="525"&gt;<br />
+          &emsp;&lt;Grid&gt;<br />
+          &emsp;&emsp;&lt;Button Content="Hello" /&gt;
+          <br />&emsp;&lt;/Grid&gt;<br />
+          &lt;/Window&gt;
+        </p>
+      </article>
+    </div>
+    <div class="tile">
+      <input type="radio" name="tile" id="4" />
+      <header><h1>Właściwości elementów</h1></header>
+      <article>
+        <p>
+          Jeśli potraktujemy ją jako atrybut to ja w niej mamy umieścić nasz
+          prostokąt. Nie ma żadnego specjalnego napisu, który mógłby to w
+          XAML-ie zrobić w ten sposób…ale. XAML oferuje alternatywny sposób
+          uzupełniania właściwości. Ten sposób pozwala na umieszczenia innych
+          elementów XAML wewnątrz innych elementów XAML.
+        </p>
+        <br />
+        <p class="code">
+          &lt;Button
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"&gt;<br />
+          &emsp;&lt;Button.Content&gt;<br />
+          &emsp;&emsp;&lt;Rectangle Height="40" Width="50"
+          Fill="BlueViolet"/&gt;<br />
+          &emsp;&lt;/Button.Content&gt;<br />
+          &lt;/Button&gt;
+        </p>
+        <br />
+        <p>
+          Właściwość Content jest teraz ustawiana przy pomocy elementu XML niż
+          jego atrybutu. Kropka w wyrażeniu “Button.Content” jest dosyć istotna.
+          Dzięki niej kompilator wie ,że odwołujesz się do właściwości danego
+          elementu obiektu wyżej ,a nie do nowego obiektu.
+        </p>
+      </article>
+    </div>
+  </body>
+</html>
