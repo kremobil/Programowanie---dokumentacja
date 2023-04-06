@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="726fd023-2509-4782-9f28-d5db4612fddc" name="Changes" comment="" />
+    <list default="true" id="726fd023-2509-4782-9f28-d5db4612fddc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../CSS/Css &amp; HTML Dev Ed/Nowy folder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CSS/Css &amp; HTML Dev Ed/Nowy folder/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CSS/Css &amp; HTML Dev Ed/Nowy folder/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CSS/Css &amp; HTML Dev Ed/Nowy folder/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,13 +33,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Ai - Tensorflow/sztuczna inteligencja i uczenienie maszynowe dla programistów" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kremo\OneDrive\Pulpit\Programowanie - dokumentacja\Python\Flask\Flask Kurs Udemy\First REST API\templates" />
@@ -71,5 +77,16 @@
       <updated>1660318541609</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -28,6 +28,7 @@ html {
   --special-color: #906272;
   --background: #414141;
   --gray-text: #525252;
+  scroll-behavior: smooth;
 }
 h1 {
   font-size: var(--header1);
@@ -302,6 +303,7 @@ footer h4 {
 .burger,
 .menu-check {
   display: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 947px) {
@@ -346,26 +348,14 @@ footer h4 {
     align-items: center;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   }
-  .menu-check {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(5%, -50%);
-    width: 5rem;
-    height: 5rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 100;
-    display: block;
-  }
-  .menu-check:checked + .nav-links {
+  .nav-open{
     transform: translate(-100%);
     opacity: 1;
   }
-  .menu-check:checked ~ .burger span {
+  .toggle span {
     background: white;
   }
-  .menu-check:checked ~ .burger span:nth-child(2) {
+  .toggle .line2 {
     transform: scaleX(0.7) translateX(-20%);
   }
 

@@ -16,17 +16,20 @@
     <header class="main-head">
       <nav>
         <h1 id="logo">Elena Joy</h1>
-        <input type="checkbox" class="menu-check" />
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="burger"><span></span><span></span><span></span></div>
+        <div class="burger">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
       </nav>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero-introduction flex">
           <h2>
             Elena Joy <br />
@@ -50,7 +53,7 @@
           <img src="./img/plant2.png" alt="" class="plant2 plant" />
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about-image">
           <h5>Minimal</h5>
           <img src="./img/about-image.png" alt="portrait picture" />
@@ -83,7 +86,7 @@
           </div>
         </div>
       </section>
-      <section class="gallery">
+      <section class="gallery" id="work">
         <header class="gallery-head">
           <h2>Quality Phothografer</h2>
           <p>My work pictures that i took</p>
@@ -93,7 +96,7 @@
         <img class="gallery3" src="./img/gallery-3.jpg" alt="lady in t-shirt" />
         <img class="gallery4" src="./img/gallery-4.jpg" alt="lady in jacket" />
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="form-warpper flex">
           <h2>
             Get in <br />
@@ -124,5 +127,6 @@
         </ul>
       </footer>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>

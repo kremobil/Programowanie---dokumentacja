@@ -1,0 +1,4 @@
+flask~=2.2.3
+flask-smorest
+python-dotenv
+marshmallow~=3.19.0
