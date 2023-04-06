@@ -4,13 +4,22 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
+<<<<<<< HEAD
+          <list size="3">
+            <item index="0" class="java.lang.String" itemvalue="Flask-JWT" />
+            <item index="1" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="2" class="java.lang.String" itemvalue="uwsgi" />
+=======
           <list size="2">
             <item index="0" class="java.lang.String" itemvalue="psycopg2" />
             <item index="1" class="java.lang.String" itemvalue="uwsgi" />
+>>>>>>> b866702dd8aef0a8f358bf336af7a638db6bc366
           </list>
         </value>
       </option>
     </inspection_tool>
+<<<<<<< HEAD
+=======
     <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoredNames">
         <list>
@@ -25,5 +34,6 @@
         </list>
       </option>
     </inspection_tool>
+>>>>>>> b866702dd8aef0a8f358bf336af7a638db6bc366
   </profile>
 </component>
